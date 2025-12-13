@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME PAGE</title>
+</head>
+<style>
+
+    header {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-style: italic;
+        text-align: center;
+        padding: 15px;
+        margin: 5px;
+        border: 2px;
+        font-size: 20px;
+    }
+
+    main {
+        font-family: Baskerville Old Face, Times New Roman, serif;
+        font-weight: bold;
+        font-style: italic;
+        text-align: center;
+        padding: 10px;
+        margin: 5px;
+        color: blue;
+        font-size: 16px;
+    }
+
+    div {
+
+        padding: 10px;
+        margin: 5px;
+        border: 2px;
+    }
+
+    button {
+        padding-left: 50px;
+        padding-right: 50px;
+        border-radius: 5px;
+        border: 1px solid black;
+        margin: 5px;
+        color: black;
+        font-weight: bolder;
+        font-size: 20px;
+    }
+
+    input, select {
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 7px;
+        border: 1px solid blue;
+        margin: 15px;
+    }
+
+
+</style>
+<body>
+    <header>
+        <div> << SUBMIT FOLLOWING CUSTOMER INFORMATION >> </div>
+    </header>
+    <main>
+        <div>
+            <form action="/api/predict" method="post">
+                <div>
+                    <label for="year-birth"> YEAR OF BIRTH :
+                        <input type="number" name="year-birth" id="year-birth" placeholder="1995" required minlength="4" maxlength="4">
+                    </label>
+                </div>
+                <div>
+                    <label for="education"> EDUCATION LEVEL :
+                        <select name="education" id="education" required>
+                            <option value="Graduation" selected> graduate </option>
+                            <option value="PhD"> Ph.D </option>
+                            <option value="Master"> masters </option>
+                            <option value="Basic"> basic </option>
+                            <option value="2n Cycle"> 2n cycle </option>
+                        </select>
+                    </label>
+                </div>
+                <div>
+                    <label for="Marital_Status"> MARITAL STATUS :
+                        <select name="Marital_Status" id="Marital_Status" required>
+                            <option value="Married"> married </option>
+                            <option value="Single" selected> single </option>
+                            <option value="Divorced"> divorced </option>
+                            <option value="Widow"> widowed </option>
+                            <option value="Together"> together </option>
+                        </select>
+                    </label>
+                </div>
+                <div>
+                    <label for="Income"> INCOME :
+                        <input type="number" name="Income" id="Income" placeholder="10000" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="Kidhome"> NUMBER OF KIDS AT HOME :
+                        <input type="number" name="Kidhome" id="Kidhome" placeholder="1" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="Teenhome"> NUMBER OF TEENS AT HOME :
+                        <input type="number" name="Teenhome" id="Teenhome" placeholder="1" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="Dt_Customer"> DATE OF CUSTOMER JOINED :
+                        <input type="date" name="Dt_Customer" id="Dt_Customer" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="Recency"> RECENCY :
+                        <input type="number" name="Recency" id="Recency" placeholder="22" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="MntWines"> AMOUNT SPENT ON WINE :
+                        <input type="number" name="MntWines" id="MntWines" placeholder="10" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="MntFruits"> AMOUNT SPENT ON FRUITS :
+                        <input type="number" name="MntFruits" id="MntFruits" placeholder="10" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="MntMeatProducts"> AMOUNT OF MEAT PRODUCTS BOUGHT :
+                        <input type="number" name="MntMeatProducts" id="MntMeatProducts" placeholder="10" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="MntFishProducts"> AMOUNT FISH PRODUCTS BOUGHT :
+                        <input type="number" name="MntFishProducts" id="MntFishProducts" placeholder="10" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="MntSweetProducts"> AMOUNT OF SWEET PRODUCTS BOUGHT :
+                        <input type="number" name="MntSweetProducts" id="MntSweetProducts" placeholder="10" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="MntGoldProds"> AMOUNT OF GOLD PRODUCTS BOUGHT :
+                        <input type="number" name="MntGoldProds" id="MntGoldProds" placeholder="10" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="NumDealsPurchases"> NUMBER OF DEALS PURCHASED :
+                        <input type="number" name="NumDealsPurchases" id="NumDealsPurchases" placeholder="10" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="NumCatalogPurchases"> NUMBER OF CATALOGS PURCHASED :
+                        <input type="number" name="NumCatalogPurchases" id="NumCatalogPurchases" placeholder="10" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="NumStorePurchases"> NUMBER OF INSTORE PURCHASES :
+                        <input type="number" name="NumStorePurchases" id="NumStorePurchases" placeholder="10" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="NumWebPurchases"> NUMBER OF WEBSITE PURCHASES :
+                        <input type="number" name="NumWebPurchases" id="NumWebPurchases" placeholder="10" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="NumWebVisitsMonth"> NUMBER OF AVERAGE WEB VISITS PER MONTH :
+                        <input type="number" name="NumWebVisitsMonth" id="NumWebVisitsMonth" placeholder="10" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="AcceptedCmp1"> DID ACCEPT IN CAMPAIGN 1 :
+                        <input type="number" name="AcceptedCmp1" id="AcceptedCmp1" placeholder="0" min="0" max="1" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="AcceptedCmp2"> DID ACCEPT IN CAMPAIGN 2 :
+                        <input type="number" name="AcceptedCmp2" id="AcceptedCmp2" placeholder="0" min="0" max="1" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="AcceptedCmp3"> DID ACCEPT IN CAMPAIGN 3 :
+                        <input type="number" name="AcceptedCmp3" id="AcceptedCmp3" placeholder="0" min="0" max="1" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="AcceptedCmp4"> DID ACCEPT IN CAMPAIGN 4 :
+                        <input type="number" name="AcceptedCmp4" id="AcceptedCmp4" placeholder="0" min="0" max="1" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="AcceptedCmp5"> DID ACCEPT IN CAMPAIGN 5 :
+                        <input type="number" name="AcceptedCmp5" id="AcceptedCmp5" placeholder="1" min="0" max="1" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="Complain"> DID HAVE ANY COMPLAINT :
+                        <input type="number" name="Complain" id="Complain" placeholder="1" min="0" max="1" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="Response"> DID GIVE ANY RESPONSE :
+                        <input type="number" name="Response" id="Response" placeholder="1" min="0" max="1" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="submit">
+                        <button type="submit" name="submit" id="submit"> PREDICT </button>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

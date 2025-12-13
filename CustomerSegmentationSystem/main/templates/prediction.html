@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PREDICTION</title>
+</head>
+<style>
+    body {
+        text-align: center;
+    }
+
+    #prediction {
+        font-weight: bold;
+        font-size: 25px;
+        padding: 50px;
+        margin: 10px;
+        borde-radius: 10px;
+        border: 1px solid black;
+        font-style: italic;
+        color: maroon;
+    }
+
+    button {
+        padding-left: 50px;
+        padding-right: 50px;
+        border-radius: 5px;
+        border: 1px solid black;
+        margin: 5px;
+        color: black;
+        font-weight: bolder;
+        font-size: 20px;
+    }
+
+</style>
+<body>
+    <section id="prediction">
+        <div>
+            <p> This particular customer belongs to cluster id : {{  prediction }} </p>
+        </div>
+    </section>
+    <section id="home">
+        <a href="/api/home"> BACK TO HOME </a>
+    </section>
+</body>
+</html>
