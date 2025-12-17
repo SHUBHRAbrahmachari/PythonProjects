@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+</head>
+<style>
+    * {
+        text-align: center;
+        font-family: Baskerville old face, sans-serif;
+        color: goldenrod;
+        font-weight: bolder;
+    }
+
+    header {
+        padding: 15px;
+        border-radius: 5px;
+        border: 3px solid goldenrod;
+        margin: 20px;
+        color: black;
+        font-style: italic;
+        font-size: 22px;
+    }
+
+    main {
+        padding: 15px;
+        border-radius: 5px;
+        border: 2px solid black;
+        margin: 20px;
+    }
+
+    div {
+        font-size: 16px;
+        padding: 20px;
+        margin: 15px;
+        border-radius: 8px;
+        border: 1px solid goldenrod;
+    }
+
+    label {
+        color: darkblue;
+        display: block;
+    }
+
+    select {
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-left: 15px;
+        margin-right: 20px;
+        color: black;
+        border-radius: 5px;
+        font-size: 18px;
+        border: 1px solid goldenrod;
+    }
+
+    button {
+        text-align: center;
+        font-style: italic;
+        border-radius: 5px;
+        border: 3px solid black;
+        font-weight: bolder;
+        font-size: 18px;
+        padding: 30px;
+        margin: 20px;
+    }
+
+
+</style>
+<body>
+
+    <header>
+            <p> << PLEASE ENTER THE FIELDS >> </p>
+    </header>
+    <main>
+        <form action="/api/predict/" method="post">
+            <div>
+                <label for="having_IP_Address"> IS HAVING IP ADDRESS :
+                    <select name="having_IP_Address" id="having_IP_Address" required>
+                        <option value="-1"> -1 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="URL_Length"> URL LENGTH :
+                    <select name="URL_Length" id="URL_Length" required>
+                        <option value="-1"> -1 </option>
+                        <option value="0"> 0 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="Shortining_Service"> SHRTENING SERVICE :
+                    <select name="Shortining_Service" id="Shortining_Service" required>
+                        <option value="-1"> -1 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="having_At_Symbol"> IS HAVING @ SYMBOL :
+                    <select name="having_At_Symbol" id="having_At_Symbol" required>
+                        <option value="-1"> -1 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="double_slash_redirecting"> IS HAVING DOUBLE SLASH REDIRECTION :
+                    <select name="double_slash_redirecting" id="double_slash_redirecting" required>
+                        <option value="-1"> -1 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="Prefix_Suffix"> ANY PREFIX OR SUFFIX :
+                    <select name="Prefix_Suffix" id="Prefix_Suffix" required>
+                        <option value="-1"> -1 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="having_Sub_Domain"> IS HAVING SUB DOMAIN :
+                    <select name="having_Sub_Domain" id="having_Sub_Domain" required>
+                        <option value="-1"> -1 </option>
+                        <option value="0"> 0 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="SSLfinal_State"> IS HAVING SSL-FINAL STATE :
+                    <select name="SSLfinal_State" id="SSLfinal_State" required>
+                        <option value="-1"> -1 </option>
+                        <option value="0"> 0 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="Domain_registeration_length"> DOMAIN REGISTERATION LENGTH :
+                    <select name="Domain_registeration_length" id="Domain_registeration_length" required>
+                        <option value="-1"> -1 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="Favicon"> IS HAVING FAVICON :
+                    <select name="Favicon" id="Favicon" required>
+                        <option value="-1"> -1 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="port"> ANY PORT :
+                    <select name="port" id="port" required>
+                        <option value="-1"> -1 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="HTTPS_token"> IS HAVING HTTPS TOKEN :
+                    <select name="HTTPS_token" id="HTTPS_token" required>
+                        <option value="-1"> -1 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="Request_URL"> ANY REQUEST URL :
+                    <select name="Request_URL" id="Request_URL" required>
+                        <option value="-1"> -1 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="URL_of_Anchor"> IS HAVING ANY URL OF ANCHOR :
+                    <select name="URL_of_Anchor" id="URL_of_Anchor" required>
+                        <option value="-1"> -1 </option>
+                        <option value="0"> 0 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="Links_in_tags"> ANY LINKS IN TAGS :
+                    <select name="Links_in_tags" id="Links_in_tags" required>
+                        <option value="-1"> -1 </option>
+                        <option value="0"> 0 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="SFH"> SFH :
+                    <select name="SFH" id="SFH" required>
+                        <option value="-1"> -1 </option>
+                        <option value="0"> 0 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="Submitting_to_email"> IS SUBMITTING TO EMAIL :
+                    <select name="Submitting_to_email" id="Submitting_to_email" required>
+                        <option value="-1"> -1 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="Abnormal_URL"> IS ABNORMAL URL :
+                    <select name="Abnormal_URL" id="Abnormal_URL" required>
+                        <option value="-1"> -1 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="Redirect"> HAVING ANY REDIRECTION :
+                    <select name="Redirect" id="Redirect" required>
+                        <option value="0"> 0 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="on_mouseover"> HAVING MOUSEOVER :
+                    <select name="on_mouseover" id="on_mouseover" required>
+                        <option value="-1"> -1 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="RightClick"> RIGHT CLICK :
+                    <select name="RightClick" id="RightClick" required>
+                        <option value="-1"> -1 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="popUpWidnow"> HAVING ANY POP-UP WINDOW :
+                    <select name="popUpWidnow" id="popUpWidnow" required>
+                        <option value="-1"> -1 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="Iframe"> HAVING I-FRAME :
+                    <select name="Iframe" id="Iframe" required>
+                        <option value="-1"> -1 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="age_of_domain">  AGE OF DOMAIN :
+                    <select name="age_of_domain" id="age_of_domain" required>
+                        <option value="-1"> -1 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="DNSRecord"> ANY DNS RECORD :
+                    <select name="DNSRecord" id="DNSRecord" required>
+                        <option value="-1"> -1 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="web_traffic"> HAVING WEB TRAFFIC :
+                    <select name="web_traffic" id="web_traffic" required>
+                        <option value="-1"> -1 </option>
+                        <option value="0"> 0 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="Page_Rank"> PAGE RANK :
+                    <select name="Page_Rank" id="Page_Rank" required>
+                        <option value="-1"> -1 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="Google_Index"> HAVING ANY GOOGLE INDEX :
+                    <select name="Google_Index" id="Google_Index" required>
+                        <option value="-1"> -1 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="Links_pointing_to_page"> LINKS POINTING TO PAGE :
+                    <select name="Links_pointing_to_page" id="Links_pointing_to_page" required>
+                        <option value="-1"> -1 </option>
+                        <option value="0"> 0 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="Statistical_report"> HAVING ANY STATISTICAL REPORT :
+                    <select name="Statistical_report" id="Statistical_report" required>
+                        <option value="-1"> -1 </option>
+                        <option value="1"> 1 </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="submit">
+                    <button type="submit" name="submit" id="submit"> PREDICT </button>
+                </label>
+            </div>
+        </form>
+    </main>
+
+</body>
+</html>
