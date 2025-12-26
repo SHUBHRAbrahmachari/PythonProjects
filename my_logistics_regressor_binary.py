@@ -68,6 +68,25 @@ class MyCustomBinaryLogisticRegression:
 
         return np.array(predictions)
 
+    def predict_proba(self, X):
+
+        if not self.__is_already_fitted:
+            raise RuntimeError("Model should be fit first!")
+
+        probabilities = []
+
+        for row_index in range(X.shape[0]):
+            coefficients = [1]
+            coefficients.extend(X[row_index, :].flatten().tolist())
+            coefficients = np.array(coefficients)
+
+            z = np.dot(self.__weights, coefficients)
+            
+            probabilities.append(1/1+np.exp(-z))
+
+        return np.array(probabilities)
+        
+
     def get_weights(self):
         if not self.__is_already_fitted:
             raise RuntimeError("Model should be fit first!")
@@ -79,3 +98,4 @@ class MyCustomBinaryLogisticRegression:
             raise RuntimeError("Model should be fit first!")
 
         return self.__weights[0]
+
